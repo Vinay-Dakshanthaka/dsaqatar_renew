@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Logistica - Shipping Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <link rel="icon" href="img/DSA Logo (1) (1)_page-0001 (1).jpg" sizes="32x32" />
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+        <a href="index.html" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
+            <img src="./logo (2).ico" style="height: 100%;width: 100%;" alt="logo" />
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="#aboutUs" class="nav-item nav-link">About</a>
+                <a href="#services" class="nav-item nav-link">Services</a>
+                <a href="#ourbranches" class="nav-item nav-link">Our Branches</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    
+        function changeActiveLink() {
+            let currentSection = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // Adjust offset for better visibility
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute("id");
+                }
+            });
+    
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(currentSection)) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    
+        window.addEventListener("scroll", changeActiveLink);
+    
+        // Also apply active class when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                navLinks.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    });
+    </script>
+    
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div class="owl-carousel header-carousel position-relative mb-5">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-75 d-flex align-items-center " style="background: rgba(6, 3, 21, .5); overflow-y: hidden;">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Shipping Agencies</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4"><span class="text-primary">Delta</span>&nbsp;Shipping&nbsp;Agency</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Delta Shipping Agencies (DSA) one of the leading shipping agency services in the Middle East</p>
+                                <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/image2 (2) (1).jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-75 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Shipping Agencies</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4"><span class="text-primary">Delta</span>&nbsp;Shipping&nbsp;Agency</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Delta Shipping Agencies (DSA) one of the leading shipping agency services in the Middle East</p>
+                                <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid overflow-hidden py-3 px-lg-0" id="aboutUs">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/DSA Logo (1) (1)_page-0001 (1).jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3 display-4">About Us</h6>
+                    <div class="row g-4 mb-5">
+                        <div class="col-sm-12 wow fadeIn" data-wow-delay="0.5s">
+                            <p class="m-0">Founded in 2019, Delta Shipping Agencies (DSA) has rapidly become one of the leading shipping agency services in the Middle East. Backed by a team of professionals with over 20 years of experience in the shipping industry and Qatar market, we bring unparalleled expertise and local knowledge to the table.</p>
+                        </div>
+                        <div class="col-sm-12 wow fadeIn" data-wow-delay="0.7s">
+                            <p class="m-0">Our success stems from being owned and managed by shipping professionals who possess in-depth industry insights and strong market relationships. Delta Shipping has grown to a position where we aim to be the preferred choice for marine-related services in Qatar by delivering competitive, reliable, and customized solutions to both local and international clients.</p>
+                        </div>
+                        <div class="col-sm-12 wow fadeIn" data-wow-delay="0.7s">
+                            <p class="m-0">At Delta Shipping Agencies, we take pride in our stellar reputation and proven track record in shipping and logistics. We excel at blending global standards with local expertise to deliver consistent, high-quality performance for our customers and principals. Our comprehensive range of shipping services caters to the evolving needs of our clients, including Shipping Lines, NVOCC Agencies, Cargo Agency, and 3PLs..</p>
+                        </div>
+                    </div>
+                    <!-- <a href="" class="btn btn-primary py-3 px-5">Explore More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
+                    <h1 class="mb-5">#1 Place To Manage All Of Your Shipments</h1>
+                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                        <div class="ps-4">
+                            <h6>Call for any query!</h6>
+                            <h3 class="text-primary m-0">+012 345 6789</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-6">
+                            <div class="bg-primary p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
+                                <i class="fa fa-users fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                                <p class="text-white mb-0">Happy Clients</p>
+                            </div>
+                            <div class="bg-secondary p-4 wow fadeIn" data-wow-delay="0.5s">
+                                <i class="fa fa-ship fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                                <p class="text-white mb-0">Complete Shipments</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
+                                <i class="fa fa-star fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                                <p class="text-white mb-0">Customer Reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <div class="delivery-container">
+        <div>
+          <div class="dilivery-content">
+            <div><i class="fa-solid fa-truck"></i></div>
+            <div class="deliver-header">
+              <h3>Deliveries</h3>
+              <p>
+                We offer premium air, road, and maritime delivery services across the globe, ensuring your goods reach their destination efficiently and securely.
+              </p>
+            </div>
+          </div>
+          <div class="dilivery-content mt-5">
+            <div><i class="fa-solid fa-cube"></i></div>
+            <div>
+              <h3>International Shipment</h3>
+              <p>We handle the seamless import and export of goods between countries via ocean, air, and road transportation.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="./img/shipping/home3-services.jpg"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+        </div>
+        <div>
+          <div class="dilivery-content">
+            <div><i class="fa-solid fa-square-up-right"></i></div>
+            <div>
+              <h3 >Our Principles</h3>
+              <p>
+                We maintain simple yet effective shipping principles, including comprehensive package tracking to ensure transparency.
+              </p>
+            </div>
+          </div>
+          <div class="dilivery-content mt-5">
+            <div><i class="fa-brands fa-ups"></i></div>
+            <div>
+              <h3>Why Choose Us</h3>
+              <p>
+                Our services stand out for their uniqueness. We provide end-to-end guidance and updates throughout the shipping process, ensuring peace of mind for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Fact End -->
+
+    <!-- Who We Are Start  -->
+
+    <div class="content-div">
+        <img
+          src="./img/shipping/logistics-2048x1366.jpg"
+          alt=""
+          width="100%"
+          height="450px"
+        />
+        <!-- <img src="./img/shipping/pexels-photo-1.jpeg" alt="" width="100%" height="450px"> -->
+        <div class="container-div">
+          <br />
+          <h2>WHO WE ARE ?</h2>
+          <br />
+          <p>
+            DSA-Q is a rapidly expanding Shipping company in Qatar with customer
+            friendly polices. We believe Customers are the life line of our
+            business and we strive to meet and exceed customer expections by
+            developing and delivering highly attractive and innivative products
+            and services to build our customer relationships. Keen to establish
+            long-term alliances with our clients by developing a through
+            understanding of their bussiness goals and employing cutting edge
+            technology solutions that can enable us to be a long term logistics
+            partner of their choice.
+          </p>
+        </div>
+      </div>
+
+    <!-- Who We Are  End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5" id="services">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase display-4">Our Services</h6>
+                <h1 class="mb-5">Explore Our Services</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 text-uppercase">SHIPPING AGENCY</h4>
+                        <p>Since its inception in 2019, shipping services have been the cornerstone of Delta Shipping Agency. As one of Qatar's most experienced and trusted agents, we provide comprehensive ship agency services tailored to meet the needs of our esteemed principals.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 text-uppercase">Air Freight</h4>
+                        <p>Our air freight services are fast, flexible, and efficient. Whether your shipments require commercial aircraft or specialized freighters, our experienced team ensures the safe and timely delivery of goods.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 text-uppercase">Project Cargo</h4>
+                        <p>Our team of experts specializes in managing all aspects of domestic and international transportation for project cargo, ensuring seamless and competitive solutions for our clients</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 text-uppercase">Transport Services</h4>
+                        <p>From air and ocean to ground transportation, we handle all logistics challenges. Whether local or global, our tailored solutions ensure smooth shipment movement across any combination of transport modes.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-4.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Train Freight</h4>
+                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-5.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Customs Clearance</h4>
+                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div> -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-6.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 text-uppercase">Customer Clearance</h4>
+                        <p>Our experienced professionals provide precise guidance to help you make informed decisions for hassle-free import or export of cargo, meeting all local and international regulatory requirements.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container feature py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">FLIGHT AND OVERLAND</h6>
+                    <h1 class="mb-5">We provide Flight and inland transportation, and cross borders as well.</h1>
+                    <p>We have a well-established flight and cargo distribution network covering many locations. Hence, guaranteeing safe, cost effective and time bound transportation services to all our clients. Be it within the city of its operation or across the country, we undertake movement of any type of cargo, dimension or size, within time with utmost safety.</p>
+                    <p>Our service commitment to clients and partners are maintained through high standards of communication. Our goal is to constantly improve upon complex processes while maintaining the cost efficiency.</p>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary start  -->
+
+    <div class="container-fluid position-relative summary-section">
+        <div class="row">
+          <div class="col-12 position-relative">
+            <div class="background-image"></div>
+            <div class="summary-content text-center text-white">
+              <h1 class="display-4 fw-bold text-white">Summary</h1>
+              <p class="lead">
+                With a global network and a team of highly skilled shipping professionals, we are committed to operational excellence. At Delta Shipping Agencies, we strive to deliver exceptional logistics solutions that meet the needs of an ever-evolving market.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+
+      <!-- summary ends -->
+    
+    <!-- Feature End -->
+
+
+    <!-- Pricing Start -->
+
+    <!-- <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Pricing Plan</h6>
+                <h1 class="mb-5">Perfect Pricing Plan</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="price-item">
+                        <div class="border-bottom p-4 mb-4">
+                            <h5 class="text-primary mb-1">Basic Plan</h5>
+                            <h1 class="display-5 mb-0">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
+                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="price-item">
+                        <div class="border-bottom p-4 mb-4">
+                            <h5 class="text-primary mb-1">Standard Plan</h5>
+                            <h1 class="display-5 mb-0">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
+                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="price-item">
+                        <div class="border-bottom p-4 mb-4">
+                            <h5 class="text-primary mb-1">Advanced Plan</h5>
+                            <h1 class="display-5 mb-0">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
+                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Pricing End -->
+
+
+    <!-- Quote Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
+                    <h1 class="mb-5">Request A Free Qoute!</h1>
+                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                        <div class="ps-4">
+                            <h6>Call for any query!</h6>
+                            <h3 class="text-primary m-0">+012 345 6789</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0" style="height: 55px;">
+                                        <option selected>Select A Freight</option>
+                                        <option value="1">Freight 1</option>
+                                        <option value="2">Freight 2</option>
+                                        <option value="3">Freight 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Quote End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Our Team</h6>
+                <h1 class="mb-5">Expert Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">Testimonial</h6>
+                <h1 class="mb-0">Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+
+     <!-- <branch start> -->
+        <div class="containerbranch" >
+            <div class="title" id="ourbranches">
+              <h1 class="text-secondary text-uppercase display-4">Our Branches</h1>
+              <button class="btn-outline-primary rounded-1" onclick="showWorldMap()">World Map</button>
+              <button class="btn-outline-primary rounded-1" onclick="showIndiaMap()">India Map</button>
+            </div>
+      
+            <div class="content-section">
+              <div class="address-section">
+                <!-- Address content -->
+                <!-- Replace this with your address details -->
+                <div class="address-world">
+                  <h2 style="color: #1e2235;">Qatar Address</h2>
+                  <p>
+                    POB : 60287, Office No : 901, Regency Business Center 2, Old
+                    Customs Building, Opposite to MIA Park, Corniche Road
+                  </p>
+                  <p>City : Doha</p> 
+                  <p>Country : Qatar</p>
+                  <p>Phone Number : +974 4468 4086</p>
+                </div>
+      
+                <!-- India Address content (hidden by default) -->
+                <div class="address-india">
+                  <h2 style="color: #1e2235;">Cochin Address</h2>
+                  <p>
+                    Office No : 14/390-F7 | 4th Floor KNA Plaza | Kundannoor Jn |
+                    Cochin PO Box : 682304
+                  </p>
+                  <p>City : Cochin </p> 
+                  <p>Country : India</p>
+                  <p>Phone Number : 0484-352872 / 3516220</p>
+                </div>
+              </div>
+      
+              <div class="map-section">
+                <!-- World Map Section -->
+                <section class="world-map" style="display: block">
+                  <div class="world-map">
+                    <img
+                      src="./img/worldmap.png"
+                      alt="World map"
+                      class="world-map-img"
+                      style="max-width: 100%; height: 100%"
+                    />
+                  </div>
+                  <div class="pin Qatar">
+                    <span>Qatar</span>
+                  </div>
+                </section>
+      
+                <!-- India Map Section -->
+                <section class="india-map" style="display: none">
+                  <div class="world-map">
+                    <!-- Replace this image with your India map -->
+                    <img
+                      src="./img/ind.png"
+                      alt="India map"
+                      class="india-map-img"
+                      style="max-width: 100%; height: 100%"
+                    />
+                    <!-- Kochi Pin -->
+                    <div class="pin Kochi">
+                      <span>Cochin, India</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Contact Start -->
+<section id="contact" class="contact py-5">
+    <div class="container" data-aos="fade-up">
+      <div class="text-center mb-4">
+        <h2 class="text-secondary text-uppercase display-4 section-name" >CONTACT US</h2>
+      </div>
+  
+      <!-- Google Map -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <iframe
+            class="w-100 rounded shadow-sm"
+            style="border: 0; height: 300px"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28855.33875635049!2d51.5094751443228!3d25.306980966367064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c5111c1d4a7b%3A0x381b6c3df03c5f46!2sMIA%20Park!5e0!3m2!1sen!2sin!4v1702873094350!5m2!1sen!2sin"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+  
+      <!-- Contact Details -->
+      <div class="">
+        <div class="row g-4 mb-3">
+          <!-- Phone -->
+          <div class="col-md-6">
+            <div class="d-flex align-items-center bg-light p-4 rounded shadow-sm">
+              <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 60px; height: 60px;">
+                <i class="fa fa-phone-alt fa-lg"></i>
+              </div>
+              <div class="ps-3">
+                <h5 class="text-dark fw-bold mb-2">Call to ask any question</h5>
+                <h4 class="text-primary mb-0 fw-bold" id="mobile">+974 4468 4086</h4>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Email -->
+          <div class="col-md-6">
+            <div class="d-flex align-items-center bg-light p-4 rounded shadow-sm">
+              <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 60px; height: 60px;">
+                <i class="fa fa-envelope-open fa-lg"></i>
+              </div>
+              <div class="ps-3">
+                <h5 class="text-dark fw-bold mb-2">Email to get free quote</h5>
+                <h4 class="text-primary mb-0 fw-bold" id="email">info@dsaqatar.com</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+            <!-- Address -->
+          <div class="col-md-12">
+            <div class="d-flex align-items-center bg-light p-4 rounded shadow-sm">
+              <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 60px; height: 60px;">
+                <i class="fa fa-map-marker-alt fa-lg"></i>
+              </div>
+              <div class="ps-3">
+                <h5 class="text-dark fw-bold mb-2">Visit our office</h5>
+                <p class="text-primary mb-0 fw-bold" id="location">
+                  POB: 60287, Office No: 901, <br> 
+                  Regency Business Center 2,  <br>
+                  Old Customs Building, Opposite to MIA Park, <br>
+                  Corniche Road, Doha-Qatar
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Contact End -->
+  
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid  h-100" src="img/DSA Logo (1) (1)_page-0001 (1).jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div> -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Services</h4>
+                    <a class="btn btn-link" href="#services">Shipping Agency</a>
+                    <a class="btn btn-link" href="#services">Air Freight</a>
+                    <a class="btn btn-link" href="#services">Project Cargo</a>
+                    <a class="btn btn-link" href="#services">Transport Services</a>
+                    <a class="btn btn-link" href="#services">Customer Clearance</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="#aboutUs">About Us</a>
+                    <a class="btn btn-link" href="#services">Our Services</a>
+                    <a class="btn btn-link" href="#ourbranches">Our Branches</a>
+                    <a class="btn btn-link" href="#contact">Contact Us</a>
+                    <!-- <a class="btn btn-link" href="">Terms & Condition</a> -->
+                    <!-- <a class="btn btn-link" href="">Support</a> -->
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="http://dsaqatar.com/">DSA</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </br>Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        function showWorldMap() {
+          document.querySelector(".world-map").style.display = "block";
+          document.querySelector(".india-map").style.display = "none";
+        }
+  
+        function showIndiaMap() {
+          document.querySelector(".world-map").style.display = "none";
+          document.querySelector(".india-map").style.display = "block";
+        }
+        // Function to show world map and address
+        function showaddressworld() {
+          document.getElementById(".address-world").style.display = "block";
+          document.getElementById(".address-india").style.display = "none";
+        }
+  
+        // Function to show India map and address
+        function showaddressindia() {
+          document.getElementById(".address-world").style.display = "none";
+          document.getElementById(".address-india").style.display = "block";
+        }
+      </script>
+</body>
+
+</html>
